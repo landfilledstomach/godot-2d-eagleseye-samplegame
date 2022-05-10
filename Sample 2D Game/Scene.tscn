@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://texture_tf_demoman_blu.svg" type="Texture" id=2]
 [ext_resource path="res://devgrid.svg" type="Texture" id=3]
 [ext_resource path="res://tf_music_upgrade_machine.wav" type="AudioStream" id=4]
+[ext_resource path="res://controlmenu_f1forcontrol.png" type="Texture" id=5]
+[ext_resource path="res://Cam.gd" type="Script" id=6]
 [ext_resource path="res://global.gd" type="Script" id=7]
+[ext_resource path="res://controlmenu_menu.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47.75, 49.5 )
@@ -87,5 +90,13 @@ autoplay = true
 [node name="MainCamera" type="Camera2D" parent="."]
 process_priority = 1
 current = true
+script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="MainCamera"]
+[node name="PressF1" type="Sprite" parent="MainCamera"]
+position = Vector2( -395, 254 )
+scale = Vector2( 0.469727, 0.492187 )
+texture = ExtResource( 5 )
+
+[node name="ControlMenu" type="Sprite" parent="MainCamera"]
+visible = false
+texture = ExtResource( 8 )
