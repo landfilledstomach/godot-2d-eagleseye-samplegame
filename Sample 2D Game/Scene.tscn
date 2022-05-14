@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://texture_tf_demoman_blu.svg" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://cam.gd" type="Script" id=6]
 [ext_resource path="res://global.gd" type="Script" id=7]
 [ext_resource path="res://controlmenu_menu.png" type="Texture" id=8]
+[ext_resource path="res://grenade.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47.75, 49.5 )
@@ -85,7 +86,6 @@ texture = ExtResource( 2 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 
 [node name="MainCamera" type="Camera2D" parent="."]
 process_priority = 1
@@ -100,3 +100,15 @@ texture = ExtResource( 5 )
 [node name="ControlMenu" type="Sprite" parent="MainCamera"]
 visible = false
 texture = ExtResource( 8 )
+
+[node name="Grenade1" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Grenade2" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Grenade3" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Grenade4" parent="." instance=ExtResource( 9 )]
+visible = false
