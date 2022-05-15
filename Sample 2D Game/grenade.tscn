@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/grenadescript.gd" type="Script" id=1]
+[ext_resource path="res://textures/tf/texture_tf_projectile_grenadepill.svg" type="Texture" id=2]
+[ext_resource path="res://sfx/grenade_launcher_shoot.wav" type="AudioStream" id=3]
+[ext_resource path="res://textures/vfx/texture_gn_vfx_explosion.svg" type="Texture" id=4]
+[ext_resource path="res://sfx/explosion.wav" type="AudioStream" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.75, 27.5 )
+
+[node name="Grenade" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="GrenadeCollision" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.8, 0.5 )
+shape = SubResource( 1 )
+
+[node name="GrenadePill" type="Sprite" parent="GrenadeCollision"]
+position = Vector2( 5, -6.5 )
+scale = Vector2( 0.615031, 0.616564 )
+texture = ExtResource( 2 )
+
+[node name="Explosion" type="Sprite" parent="GrenadeCollision"]
+visible = false
+scale = Vector2( 2, 3 )
+texture = ExtResource( 4 )
+
+[node name="grenadeshoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -17.727
+
+[node name="fusetime" type="Timer" parent="."]
+
+[node name="explode" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -23.636
