@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controlmenu_menu.png-f1fef0c1afa61f6ed475222a9ebd3e37.stex"
+path="res://.import/devgrid.svg-4740a83321b2c5c16c4c87cb413ae79d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://controlmenu_menu.png"
-dest_files=[ "res://.import/controlmenu_menu.png-f1fef0c1afa61f6ed475222a9ebd3e37.stex" ]
+source_file="res://textures/dev/devgrid.svg"
+dest_files=[ "res://.import/devgrid.svg-4740a83321b2c5c16c4c87cb413ae79d.stex" ]
 
 [params]
 

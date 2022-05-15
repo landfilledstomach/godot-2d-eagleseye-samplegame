@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://grenadescript.gd" type="Script" id=1]
-[ext_resource path="res://texture_tf_projectile_grenadepill.svg" type="Texture" id=2]
-[ext_resource path="res://grenade_launcher_shoot.wav" type="AudioStream" id=3]
-[ext_resource path="res://texture_gn_vfx_explosion.svg" type="Texture" id=4]
-[ext_resource path="res://explosion.wav" type="AudioStream" id=5]
+[ext_resource path="res://script/grenadescript.gd" type="Script" id=1]
+[ext_resource path="res://textures/tf/texture_tf_projectile_grenadepill.svg" type="Texture" id=2]
+[ext_resource path="res://sfx/grenade_launcher_shoot.wav" type="AudioStream" id=3]
+[ext_resource path="res://textures/vfx/texture_gn_vfx_explosion.svg" type="Texture" id=4]
+[ext_resource path="res://sfx/explosion.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.75, 27.5 )
@@ -22,6 +22,7 @@ scale = Vector2( 0.615031, 0.616564 )
 texture = ExtResource( 2 )
 
 [node name="Explosion" type="Sprite" parent="GrenadeCollision"]
+visible = false
 scale = Vector2( 2, 3 )
 texture = ExtResource( 4 )
 

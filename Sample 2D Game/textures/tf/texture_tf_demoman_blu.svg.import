@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/devgrid.svg-b89aa851773f52a939750bf3a0fba29e.stex"
+path="res://.import/texture_tf_demoman_blu.svg-7d063fe4aa327022335e289cc0bea55f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devgrid.svg"
-dest_files=[ "res://.import/devgrid.svg-b89aa851773f52a939750bf3a0fba29e.stex" ]
+source_file="res://textures/tf/texture_tf_demoman_blu.svg"
+dest_files=[ "res://.import/texture_tf_demoman_blu.svg-7d063fe4aa327022335e289cc0bea55f.stex" ]
 
 [params]
 

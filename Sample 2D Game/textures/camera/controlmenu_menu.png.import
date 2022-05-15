@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture_tf_projectile_grenadepill.svg-493a498d0ffbcab9db5e81f10a35f4a5.stex"
+path="res://.import/controlmenu_menu.png-ba91887dfeb7178c27589a668f3190e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture_tf_projectile_grenadepill.svg"
-dest_files=[ "res://.import/texture_tf_projectile_grenadepill.svg-493a498d0ffbcab9db5e81f10a35f4a5.stex" ]
+source_file="res://textures/camera/controlmenu_menu.png"
+dest_files=[ "res://.import/controlmenu_menu.png-ba91887dfeb7178c27589a668f3190e7.stex" ]
 
 [params]
 

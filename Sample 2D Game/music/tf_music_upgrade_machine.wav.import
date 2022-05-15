@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tf_music_upgrade_machine.wav-45f5da91dfdf733458c3179ab227993b.sample"
+
+[deps]
+
+source_file="res://music/tf_music_upgrade_machine.wav"
+dest_files=[ "res://.import/tf_music_upgrade_machine.wav-45f5da91dfdf733458c3179ab227993b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controlmenu_f1forcontrol.png-38856dc70c1e5aee6d691e237904f885.stex"
+path="res://.import/texture_gn_vfx_explosion.svg-c9731eaff9c807036d604b6a7025239b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://controlmenu_f1forcontrol.png"
-dest_files=[ "res://.import/controlmenu_f1forcontrol.png-38856dc70c1e5aee6d691e237904f885.stex" ]
+source_file="res://textures/vfx/texture_gn_vfx_explosion.svg"
+dest_files=[ "res://.import/texture_gn_vfx_explosion.svg-c9731eaff9c807036d604b6a7025239b.stex" ]
 
 [params]
 

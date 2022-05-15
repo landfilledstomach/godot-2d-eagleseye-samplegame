@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture_tf_demoman_blu.svg-490d473791a0757c50316d41ea1d119f.stex"
+path="res://.import/texture_tf_projectile_grenadepill.svg-954cfc8c68b93a970bfb5b651ca75638.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://texture_tf_demoman_blu.svg"
-dest_files=[ "res://.import/texture_tf_demoman_blu.svg-490d473791a0757c50316d41ea1d119f.stex" ]
+source_file="res://textures/tf/texture_tf_projectile_grenadepill.svg"
+dest_files=[ "res://.import/texture_tf_projectile_grenadepill.svg-954cfc8c68b93a970bfb5b651ca75638.stex" ]
 
 [params]
 
