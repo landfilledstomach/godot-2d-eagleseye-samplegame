@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Sample 2D Game"
-run/main_scene="res://Scene.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
 [editor]
@@ -121,6 +121,20 @@ reload={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":82,"unicode":0,"echo":false,"script":null)
  ]
 }
+test={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777349,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="player_damage"
+2d_physics/layer_2="player_projectiles"
+2d_physics/layer_3="enemies_damage"
+2d_physics/layer_4="enemies_projectiles"
+2d_physics/layer_5="player"
+2d_physics/layer_6="enemies"
 
 [mono]
 

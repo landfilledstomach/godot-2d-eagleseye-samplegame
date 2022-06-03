@@ -1,0 +1,11 @@
+{
+   "primary":{
+        "1":{
+            "weapon":"Grenade Launcher",
+            "instance": "res://scenes/weapons/grenade_launcher.tscn",
+            "reference":null
+        }
+   },
+   "secondary":{},
+   "melee":{}
+}
