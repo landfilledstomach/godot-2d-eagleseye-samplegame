@@ -2,8 +2,10 @@
    "primary":{
         "1":{
             "weapon":"Grenade Launcher",
-            "instance": "res://scenes/weapons/grenade_launcher.tscn",
-            "reference":null
+            "instance": "res://scenes/weapons/grenadelauncher.tscn",
+            "type": 1,
+            "clip_size": 3,
+            "ammo":"To be added soon"
         }
    },
    "secondary":{},

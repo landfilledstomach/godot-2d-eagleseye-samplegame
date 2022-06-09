@@ -13,3 +13,9 @@ script = ExtResource( 1 )
 [node name="projectile_grenade3" parent="." instance=ExtResource( 2 )]
 
 [node name="projectile_grenade4" parent="." instance=ExtResource( 2 )]
+
+[node name="Firerate" type="Timer" parent="."]
+one_shot = true
+
+[node name="Reload" type="Timer" parent="."]
+one_shot = true

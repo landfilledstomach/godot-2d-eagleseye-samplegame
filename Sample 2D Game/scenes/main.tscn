@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://script/weapon.gd" type="Script" id=2]
 [ext_resource path="res://textures/dev/devgrid.svg" type="Texture" id=3]
 [ext_resource path="res://music/tf_music_upgrade_machine.wav" type="AudioStream" id=4]
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://script/global.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60.5, 306 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 7 )
@@ -614,16 +619,66 @@ texture = ExtResource( 3 )
 offset = Vector2( -10704.8, 113.639 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3138, 438 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 
-[node name="Camera" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 2, 2 )
+[node name="Camera" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 883, 92 )
 
 [node name="Weapon" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
-[connection signal="file_player" from="." to="Player" method="file_load_player"]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -600, 0 )
+rotation = -3.7001
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -1472, 707 )
+rotation = -0.294961
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -1291, 16 )
+
+[node name="Wall1" type="StaticBody2D" parent="Enemies"]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wall1"]
+position = Vector2( -291, -12 )
+shape = SubResource( 1 )
+
+[node name="Wall2" type="StaticBody2D" parent="Enemies"]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wall2"]
+position = Vector2( 294, -7 )
+shape = SubResource( 1 )
+
+[node name="Wall3" type="StaticBody2D" parent="Enemies"]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wall3"]
+position = Vector2( -14, -340 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Wall4" type="StaticBody2D" parent="Enemies"]
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wall4"]
+position = Vector2( -19, 290 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[connection signal="file_weapon_reload" from="Player" to="." method="_on_weapon_reload_file"]
+[connection signal="file_weapon_reload" from="Enemies/Enemy1" to="." method="_on_weapon_reload_file"]
+[connection signal="file_weapon_reload" from="Enemies/Enemy2" to="." method="_on_weapon_reload_file"]
+[connection signal="file_weapon_reload" from="Enemies/Enemy3" to="." method="_on_weapon_reload_file"]

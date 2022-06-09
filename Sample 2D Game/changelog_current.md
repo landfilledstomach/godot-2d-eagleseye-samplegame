@@ -61,4 +61,52 @@ Comments and stuff made by developer while developing this version:
     stuff like reloading, firerate and damage are going be dealt within the weapon instances themselves, the signals to shoot and reload and damage are given by the player and enemies.
     also "cam.gd" is unused for now.
     
+    2:39 PM 3/6/2022
+    I just want anyone reading this to know that it does not really take 2 days long to complete some of these tasks, its just that i do this project out of mood and motivation, so if I am not interested in doing this, I wont.
+
+    8:19 4/6/2022
+    Ok so embarrasing story, I was trying to fix this bug where the grenade_launcher Node would not interact with its projectile_grenade Child nodes, and I figured it out, its because I did not put onready beforehand, which meant that when the child nodes were not ready, the engine tried to find them anyway, and because they were not ready the engine returned a null instance for each child node not found.
+    But hey atleast I noticed.
+
+    9:04 AM 4/6/2022
+    I have successfully created a way for the player and possibly other entities to shoot projectiles. I am now going to implement reloading.
+
+    9:34 AM 4/6/2022
+    I have successfully created a way for the player and possibly other entities to reload now.
+    I basically have the bare minimum combat standards, now I just need a way for the player to damage enemies and vice versa.
+
+    11:06 AM 4/6/2022
+    I am currently making a way for weapon scripts to easily branch off of grenadelauncher.gd, Im planning on making 
+    grenadelauncher.gd to be the absolute parent of all weapon scripts.
+    I say the same with grenadelauncher_projectile.gd
+
+    5:10 PM 5/6/2022
+    After an hour of pain trying to figure out why the weapons kept firing when they werent supposed to, I have the way for the player and enemies to be combative, now I just need them to actually deal damage to eachother, but first, the players hud.
+
+    11:06 AM 6/6/2022
+    I added a crosshair for the player, cam.gd is being used now and the clip size of the weapon the player is using will update the text on top of the crosshair to tell you the clip size of the weapon.
+    I also readded F1 For Controls and the Control Menu textures that I removed earlier.
+    I also also added a font resource for textual stuff (https://www.1001freefonts.com/collegiate.font).
+
+    9:56 AM 7/6/2022
+    I added an assault rifle sound effect earlier but I dont exactly have a plan on actually implementing a new weapon right now, so perhaps later.
+    Anyways I cant really figure out how to dynamically create a new enemy entity so Im just gonna ignore that and move on.
+    What I AM adding is the ability to damage things so yeah.
+
+    12:24 PM 8/6/2022
+    I am attempting to create an "entity.gd" script that will be extended from for player.gd and enemy.gd because features will be much easier to implement if I just need to modify 1 script to modify all others connected to it.
+
+    2:41 PM 8/6/2022
+    I decided to add a "clip_size" key to the Grenade Launcher weapon in weapon_metadata.json, this will only be used for when loading the weapon in.
+
+    4:49 PM 8/6/2022
+    entity.gd is so god damn buggy I could not make the enemies shoot thier weapons in any way no matter what I did they just did not attack in any way i am seriously going insane right wtf I just want you to attack thats it whyyyyy.
+    I just decided to make enemy.gd its own script.
+
+    9:50 PM 8/6/2022
+    I think enemy.gd is not working properly because I did not connect the damn enemy entities file_weapon_reload signals to global.gd, lets hope this works.
+
+    9:58 PM 8/6/2022
+    I took a little more than just connecting a signal, but just a few tweaks and now this works, how nice.
+
     
