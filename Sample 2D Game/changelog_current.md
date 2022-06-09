@@ -109,4 +109,20 @@ Comments and stuff made by developer while developing this version:
     9:58 PM 8/6/2022
     I took a little more than just connecting a signal, but just a few tweaks and now this works, how nice.
 
-    
+v1.3 Post-Alpha | github tag: v1.3-PostAlpha
+This release has reworked alot of features in 1.2, adding new features for you to play around with and allowing for easier implementation of new features thanks to Godot Inheritance.
+
+### New Files
+
+- `changelog.md`: Contains info and the changelog of all versions of this project
+- `changelog_current.md`: Contains info about the current version of this project, along with live developer commentary
+- `weapon_metadata.json`: Contains the data required to instance weapon scenes for entities to use
+- `enemy.tscn`: Contains Nodes that make it detectable to projectiles and can also shoot projectiles itself
+- `enemy.gd`: Inherits from `entity.gd`, contains an AI that makes the enemy shoot or reload every second
+- Improved `player.gd`: Inherits from `entity.gd`, contains code that allows the player to move and shoot
+- `entity.gd`: Contains code that allows entities inherited from it to move and attack and reload
+- `grenadelauncher.tscn`: Contains 4 `grenadelauncher_projectile.tscn` instances that act as its projectiles
+- `grenadelauncher_projectile.tscn`: a Projectile that can deal damage to enemies or friendlies depending on its team
+- `grenadelauncher.gd`: Contains code that allows entities that send an attack1 or reload signal to it to use it as a weapon
+- `grenadelauncher_projectile.gd`: Contains code that makes `grenadelauncher_projectile.tscn` move and damage entities.
+- `CollegiateBlackFLF.ttf`: A font used for displaying text, you can find it [here](https://www.1001freefonts.com/collegiate.font)
